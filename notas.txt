@@ -1,0 +1,189 @@
+IntelliSense no visual code para preenchimento automático do código
+
+code .
+
+
+html:5
+
+dar espaço de linha antes de title e digitar link
+escrever o nome do arquivo css
+
+fn + f12  > no navegador para abrir o modo desenvolvedor 
+
+DOM no navegador (modelo de objeto no navegador
+
+Separação de interesses
+
+seletor :root
+
+O * aplicasse a todos os elementos da páginas a menos que o elemento seja específico
+
+Javascript ou ecmascript
+
+Digitar script:src  serve para adicionar o código para especificar o caminho o do javascript
+
+'use strict'
+
+
+_________________________
+
+
+bianca
+
+prot de cancelamento v
+
+cs32384449
+
+_________________________
+head a branch que está ativa
+
+- Ver se git está instalado
+- Git init
+- Git Status
+- Git branch  (só mostra as branchs locais)
+- Git branch --all (mostra todas branchs)
+- git add (para adicionar na stage area ou para aceitar uma mudança)
+- git commit -m
+- git log
+- git log -- online --decorate --graph --all
+- git checkout nome do arquivo
+- git switch main
+- git switch -
+- git switch -c nome da branch (cria uma branch e vai para ela)
+- git checkout -b (mesmo caso do switch)
+- git branch -d ou -D nome do arquivo (serve para apagar branch)
+- git push --delete
+- git merge (recursive strategy)
+    Para o merge tem que estar na branch que eu quero modificar
+- git merge hotfix
+- git commit -a -m "colocarmsg" (faz o add e o commit juntos)
+- git branch -v (mais detalhes)
+- git branch --merged (mostra o que foi mesclado)
+- git branch --no-merged
+- git branch --move nome antigo   nome novo (renomear branch)
+- git fetch origin (traz os commits)
+- git push
+--set-upstream origin add_auth (para enviar primeira vez uma branch local para remoto)
+- git fetch --all (para trazer todas as branchs)
+- git branch --vv
+
+- git checkout nome_da_branch^ (seleciona o pai da branch)
+- git checkout HEAD~4 (para subir varios nives de commits)
+git branch -f main HEAD~3 (Move (à força) o ramo main 3 ancestrais acima do HEAD)
+
+-git branch - main C6 (move main para o local C6)
+
+
+- git reset HEAD~1  (PARA LOCAL)
+- git revert HEAD (PARA REMOTO)
+
+- git cherry-pick C2 C4 (cria uma nova coluna com os que vc definiu)
+
+- git rebase -i HEAD~4 (cria uma nova coluna com o commits e ordem selecionados)
+ o squash combina arquivos
+
+- git cherry-pick origin/main
+- git rebase origin/main
+- git merge origin/main
+
+- git pull (depois de baixar com fetch e quiser mergear.
+
+
+
+conexão com github
+- git remote show origin
+- git remote -v
+- fetch é o de descida
+- push de subida
+
+
+Quando meu histórico está desatualizado
+
+- git fetch, git rebase origin/main, git push
+ ou
+- git fetch, git merge origin/main, git push
+ou
+- git pull --rebase, git push
+ou
+- git pull, git push
+
+
+Quando o main fica travado
+
+- crie uma nova branch de um push para o repositório main e atualize a main com o remoto
+
+
+git reset --hard o/main
+git checkout -b feature C2
+git push origin feature
+
+
+- Resolvendo o exercicio de colocar em ordem e atualizar
+
+$ git fetch
+$ git rebase o/main side1 (traga a side1 para o/main)
+$ git rebase side1 side2
+$ git rebase side2 side3
+$ git rebase side3 main
+Fast forward...
+$ git push
+
+
+- Mesmo do acima só que usando o merge
+$ git checkout main
+$ git pull
+Fast forward...
+$ git merge side1
+$ git merge side2
+$ git merge side3
+$ git push
+
+
+REMOTE TRACKING
+- Cria um novo ramo chamado realmenteNaoSouOMain e o configura para seguir o o/main.
+git checkout -b realmenteNaoSouOMain o/main
+ou
+git branch -u o/main foo
+
+- git checkout -b foo o/main; git pull
+- git checkout -b foo o/main; git commit; git push
+
+
+- o -- do rebase usado para puxar o remoto sem especificar
+$ git checkout -b side o/main
+local branch "side" set to track remote branch "o/main"
+$ git commit
+$ git pull --rebase
+git push
+
+
+- git checkout C09; git push origin main
+
+- ser especifico com a origem e destino
+git push origin foo^:main
+
+- se o destino não existir, eu posso criar
+git push origin main:nemBranch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git add asterisco ou ponto final para adicionar as mudanças na stage area
